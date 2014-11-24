@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=server\ user
+comment0.target=MailClient(MailServer,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ para\ los\ objetos\ de\ la\ clase\ MailClient\r\n
+comment1.params=
+comment1.target=MailItem\ getNextMailItem()
+comment1.text=\r\nMetodo\ que\ devuelve\ el\ ultimo\ mail\ \r\n
+comment2.params=
+comment2.target=void\ printNextMailItem()
+comment2.text=\r\n\ Metodo\ que\ devuelve\ el\ ultimo\ mail\ y\ lo\ muestra\ por\ pantalla,\ si\ no\ hay\ mail\r\n\ que\ mostrar,\ muestra\ un\ mensaje\ de\ "No\ hay\ mensajes"\r\n
+comment3.params=To\ Message
+comment3.target=void\ sendMailItem(java.lang.String,\ java.lang.String)
+comment3.text=\r\n\ Metodo\ que\ crea\ un\ objeto\ MailItem\ y\ lo\ envia\ al\ servidor\ basandose\ en\ los\r\n\ dos\ parametros\ "To"\ y\ "Message"\r\n
+numComments=4
