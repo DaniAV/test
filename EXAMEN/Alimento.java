@@ -1,9 +1,9 @@
-
+import java.util.ArrayList;
 /**
- * Write a description of class Alimento here.
+ *Clase Alimento
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Daniel Alvarez Vaquero) 
+ * @version (12/12/2014)
  */
 public class Alimento
 {
@@ -12,7 +12,8 @@ public class Alimento
     private float GramosProteinas;
     private float Carbohidratos;
     private float Grasas;
-
+    private ArrayList<String> ListaAlimentos;
+    
     /**
      * Constructor para los objetos de la clase Alimento
      */
@@ -23,13 +24,24 @@ public class Alimento
         GramosProteinas = Proteinas;
         Carbohidratos = Hidratos;
         Grasas = GrasasAli;
-    }
+        ListaAlimentos = new ArrayList<String>();
 
+    }
+    
+    /**
+     * Metodo que añade un alimento a la lista
+     */
+    public void añadirAlimento(String nombre)
+    {
+        ListaAlimentos.add(nombre);
+    }
+    
+   
     /**
      * Metodo que muestra la información nutricional 
      */
     public void muestraDatos()
-   
+
     {
         System.out.println ("Nombre: " + NombreAlimento);
         System.out.println ("Proteinas por cada 100 gramos: " + GramosProteinas);
@@ -50,27 +62,27 @@ public class Alimento
         }
 
     }
-    
+
     /**
      * Metodo que calcula la cantidad de calorias
      */
     private float CalcuCalorias()
     {
-    float CaloriasPorProteina = GramosProteinas*4;
-    float CaloriasPorGrasa = Grasas*9;
-    float CaloriasTotales = CaloriasPorProteina + CaloriasPorGrasa;
-    return CaloriasTotales;
+        float CaloriasPorProteina = GramosProteinas*4;
+        float CaloriasPorGrasa = Grasas*9;
+        float CaloriasTotales = CaloriasPorProteina + CaloriasPorGrasa;
+        return CaloriasTotales;
     }
-    
+
     /**
      * Metodo que devuelve el nombre del alimento
      */
-    
+
     public String getNombreAlimento()
     {
         return NombreAlimento;
     }
-  
+
     /**
      * Metodo que devuelve la cantidad de proteinas del alimento
      */
@@ -78,7 +90,7 @@ public class Alimento
     {
         return GramosProteinas;
     }
-    
+
     /**
      * Metodo que devuelve la cantidad de carbohidratos
      */
@@ -86,7 +98,7 @@ public class Alimento
     {
         return Carbohidratos;
     }
-    
+
     /**
      * Metodo que devuelve la cantidad de grasas
      */
@@ -94,6 +106,5 @@ public class Alimento
     {
         return Grasas;
     }
-    
-    
+
 }

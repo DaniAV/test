@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Usuario here.
+ * Clase Usuario 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Daniel Alvarez Vaquero) 
+ * @version (12/12/2014)
  */
 public class Usuario
 {
@@ -34,20 +34,20 @@ public class Usuario
      */
     public void comer(Alimento nombre, int cantidad)
     {
-       CantidadIngerida = cantidad;
-       this.AlimentoIngerido = AlimentoIngerido + nombre.getNombreAlimento();
-       this.CantidadIngerida = CantidadIngerida + cantidad;
-       this.CantidadProteinas = cantidad * nombre.getCantidadProteinas();
-       this.CantidadCarbohidratos = cantidad * nombre.getCantidadCarbohidratos();
-       this.CantidadGrasas = cantidad * nombre.getCantidadGrasas();
- 
+        CantidadIngerida = cantidad;
+        this.AlimentoIngerido = AlimentoIngerido + nombre.getNombreAlimento();
+        this.CantidadIngerida = CantidadIngerida + cantidad;
+        this.CantidadProteinas = cantidad * nombre.getCantidadProteinas();
+        this.CantidadCarbohidratos = cantidad * nombre.getCantidadCarbohidratos();
+        this.CantidadGrasas = cantidad * nombre.getCantidadGrasas();
+
     }
-    
+
     /**
      * Metodo que muestra los datos del usuario, y del alimento que ha consumido en proporcion
      */
     public void muestraDatosUsuario()
-   
+
     {
         System.out.println ("Nombre: " + nombre);
         System.out.println ("Gramos proteinas ingeridos: " + CantidadProteinas + "" + "(" + ((CantidadIngerida * CantidadProteinas)/100 )+"%" + ")" );
@@ -55,25 +55,26 @@ public class Usuario
         System.out.println ("Gramos de grasas ingeridas: " + CantidadGrasas + "" + "(" + ((CantidadIngerida * CantidadGrasas)/100 )+"%" + ")");
         System.out.println ("Calorias ingeridas: " + CantidadCalorias);
     }
-    
+
     /**
      * Metodo que compara a un usuario con otro
      */
-    
+
     public void ComparaUsuarios(Usuario nombre)
     {
         float CaloriasOtroUsuario = nombre.CantidadCalorias;
         String NombreOtroUsuario = nombre.getNombre();
-        if (CantidadCalorias > nombre.CantidadCalorias)
-            {
-                System.out.println (this.nombre + " ha consumido mas calorias que " + NombreOtroUsuario);
-            }
-        else 
-            {
-                System.out.println (NombreOtroUsuario + " ha consumido menos calorias que " + this.nombre);
-            }
+        
+        if (this.CantidadCalorias > CaloriasOtroUsuario)
+        {
+            System.out.println (this.nombre + " ha consumido mas calorias que " + NombreOtroUsuario);
+        }
+        else
+        {
+            System.out.println (NombreOtroUsuario + " ha consumido mas calorias que " + this.nombre);
+        }
     }
-   
+
     /**
      * Metodo que muestra el nombre del usuario
      */
@@ -81,4 +82,9 @@ public class Usuario
     {
         return nombre;
     }
+
+    /**
+     * Metodo que muestra cual es el alimento mas calorico consumido por el usuario
+     */
+
 }
