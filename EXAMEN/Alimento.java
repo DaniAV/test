@@ -62,4 +62,38 @@ public class Alimento
     return CaloriasTotales;
     }
     
+    /**
+     * Metodo que devuelve el nombre del alimento
+     */
+    
+    public String getNombreAlimento()
+    {
+        return NombreAlimento;
+    }
+  
+    /**
+     * Metodo que devuelve la cantidad de proteinas del alimento
+     */
+    public float getCantidadProteinas()
+    {
+        return GramosProteinas;
+    }
+    
+    /**
+     * Metodo que devuelve la cantidad de carbohidratos
+     */
+    public float getCantidadCarbohidratos()
+    {
+        return Carbohidratos;
+    }
+    
+    /**
+     * Metodo que devuelve la cantidad de grasas
+     */
+    public float getCantidadGrasas()
+    {
+        return Grasas;
+    }
+    
+    
 }
