@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=Nombre\ Proteinas\ Hidratos\ GrasasAli
+comment0.target=Alimento(java.lang.String,\ float,\ float,\ float)
+comment0.text=\r\n\ Constructor\ para\ los\ objetos\ de\ la\ clase\ Alimento\r\n
+comment1.params=
+comment1.target=void\ muestraDatos()
+comment1.text=\r\n\ Metodo\ que\ muestra\ la\ informaci\u00F3n\ nutricional\ \r\n
+comment2.params=
+comment2.target=float\ CalcuCalorias()
+comment2.text=\r\n\ Metodo\ que\ calcula\ la\ cantidad\ de\ calorias\r\n
+numComments=3
