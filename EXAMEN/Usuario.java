@@ -11,9 +11,10 @@ public class Usuario
     private String nombre; // Aqui se almacena el nombre del usuario
     private String AlimentoIngerido; // Aqui se almacena el alimento que ingiere
     private float CantidadIngerida; // Aqui se almacena la cantidad que ingiere
-    private float CantidadProteinas;
-    private float CantidadCarbohidratos;
-    private float CantidadGrasas;
+    private float CantidadProteinas; // Aqui se almacena la cantidad de proteinas
+    private float CantidadCarbohidratos; //Aqui se almacena la cantidad de carbohidratos
+    private float CantidadGrasas; // Aqui se almacena la cantidad de grasas
+    private float CantidadCalorias; // Aqui se almacena la cantidad de calorias
     /**
      * Constructor for objects of class Usuario
      */
@@ -25,6 +26,7 @@ public class Usuario
         CantidadProteinas = 0;
         CantidadCarbohidratos = 0;
         CantidadGrasas = 0;
+        CantidadCalorias =(CantidadProteinas*4) + (CantidadGrasas*9);
     }
 
     /**
@@ -41,6 +43,9 @@ public class Usuario
  
     }
     
+    /**
+     * Metodo que muestra los datos del usuario, y del alimento que ha consumido en proporcion
+     */
     public void muestraDatosUsuario()
    
     {
@@ -48,6 +53,32 @@ public class Usuario
         System.out.println ("Gramos proteinas ingeridos: " + CantidadProteinas + "" + "(" + ((CantidadIngerida * CantidadProteinas)/100 )+"%" + ")" );
         System.out.println ("Gramos carbohidratos ingeridos: " + CantidadCarbohidratos + "" + "(" + ((CantidadIngerida * CantidadCarbohidratos)/100 )+"%" +")" );
         System.out.println ("Gramos de grasas ingeridas: " + CantidadGrasas + "" + "(" + ((CantidadIngerida * CantidadGrasas)/100 )+"%" + ")");
-        System.out.println ("Calorias ingeridas: " + ((CantidadProteinas*4) + (CantidadGrasas*9))  );
+        System.out.println ("Calorias ingeridas: " + CantidadCalorias);
+    }
+    
+    /**
+     * Metodo que compara a un usuario con otro
+     */
+    
+    public void ComparaUsuarios(Usuario nombre)
+    {
+        float CaloriasOtroUsuario = nombre.CantidadCalorias;
+        String NombreOtroUsuario = nombre.getNombre();
+        if (CantidadCalorias > nombre.CantidadCalorias)
+            {
+                System.out.println (this.nombre + " ha consumido mas calorias que " + NombreOtroUsuario);
+            }
+        else 
+            {
+                System.out.println (NombreOtroUsuario + " ha consumido menos calorias que " + this.nombre);
+            }
+    }
+   
+    /**
+     * Metodo que muestra el nombre del usuario
+     */
+    public String getNombre()
+    {
+        return nombre;
     }
 }
