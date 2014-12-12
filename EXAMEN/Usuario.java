@@ -32,6 +32,7 @@ public class Usuario
      */
     public void comer(Alimento nombre, int cantidad)
     {
+       CantidadIngerida = cantidad;
        this.AlimentoIngerido = AlimentoIngerido + nombre.getNombreAlimento();
        this.CantidadIngerida = CantidadIngerida + cantidad;
        this.CantidadProteinas = cantidad * nombre.getCantidadProteinas();
@@ -44,9 +45,9 @@ public class Usuario
    
     {
         System.out.println ("Nombre: " + nombre);
-        System.out.println ("Gramos proteinas ingeridos: " + CantidadProteinas );
-        System.out.println ("Gramos carbohidratos ingeridos: " + CantidadCarbohidratos );
-        System.out.println ("Gramos de grasas ingeridas: " + CantidadGrasas );
-        System.out.println ("Calorias ingeridas: " + ((CantidadProteinas*4) + (CantidadGrasas*9)) );
+        System.out.println ("Gramos proteinas ingeridos: " + CantidadProteinas + "" + "(" + ((CantidadIngerida * CantidadProteinas)/100 )+"%" + ")" );
+        System.out.println ("Gramos carbohidratos ingeridos: " + CantidadCarbohidratos + "" + "(" + ((CantidadIngerida * CantidadCarbohidratos)/100 )+"%" +")" );
+        System.out.println ("Gramos de grasas ingeridas: " + CantidadGrasas + "" + "(" + ((CantidadIngerida * CantidadGrasas)/100 )+"%" + ")");
+        System.out.println ("Calorias ingeridas: " + ((CantidadProteinas*4) + (CantidadGrasas*9))  );
     }
 }
