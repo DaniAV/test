@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Test()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Test\r\n
+comment1.params=
+comment1.target=void\ multiplesofFive()
+comment1.text=\r\n\ Metodo\ que\ muestra\ los\ multiplos\ de\ 5\ entre\ 10\ y\ 95\r\n
+comment2.params=
+comment2.target=void\ sumValues()
+comment2.text=\r\n\ Metodo\ que\ muestra\ la\ suma\ de\ los\ numeros\ comprendidos\ entre\ 0\ y\ 10\ incluidos\r\n
+comment3.params=a\ b
+comment3.target=void\ sumValuesInterval(int,\ int)
+comment3.text=\r\n\ Metodo\ que\ muestra\ la\ suma\ de\ los\ valores\ comprendidos\ entre\ los\ numeros\ dados\ por\ parametro\r\n
+numComments=4
